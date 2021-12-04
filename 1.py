@@ -48,7 +48,7 @@ def solve_task1(x):
     return c
 
 
-solve_task1(x)
+print("Task 1 Result:", solve_task1(x))
 
 
 @timing
@@ -60,6 +60,4 @@ def solve_task2(x):
     return c
 
 
-solve_task2(x)
-
-
+print("Task 2 Result:", solve_task2(x))
