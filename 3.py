@@ -95,5 +95,3 @@ def solve_task2(x):
     return oxygen * co_two
 
 print("Task 2 Result:", solve_task2(x))
-
-
