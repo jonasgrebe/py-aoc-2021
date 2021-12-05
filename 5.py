@@ -57,41 +57,6 @@ def solve_task1(x):
         
     for x1, y1, x2, y2 in lines:
         
-        if x1 > x2:
-            x1, x2 = x2, x1
-        if y1 > y2:
-            y1, y2 = y2, y1
-        
-        #print(x1, x2, y1, y2)
-        
-        if x1 == x2:
-            for y in range(y1, y2+1):
-                board[y, x1] += 1
-        elif y1 == y2:
-            for x in range(x1, x2+1):
-                board[y1, x] += 1
-                
-    return len(np.where(board >= 2)[0])
-
-
-@timing
-def solve_task1(x):
-    
-    board = None
-    
-    lines = []
-    for xx in x:
-        p1, p2 = xx.split(' -> ')
-        x1, y1 = p1.split(',')
-        x2, y2 = p2.split(',')
-        
-        lines.append([int(x1), int(y1), int(x2), int(y2)])
-    
-    lines = np.array(lines)
-    board = np.zeros(shape=(lines.max()+1, lines.max()+1))
-        
-    for x1, y1, x2, y2 in lines:
-        
         xrange = range(x1, x2-1, -1) if x1 > x2 else range(x1, x2+1)
         yrange = range(y1, y2-1, -1) if y1 > y2 else range(y1, y2+1)
 
