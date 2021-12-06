@@ -40,7 +40,7 @@ x = readlines()
 
 
 @timing
-def solve_task2(x):
+def solve_task1(x):
     
     fishes = [int(f) for f in x[0].split(',')]
     fishes = [fishes.count(i) for i in range(9)]
