@@ -42,10 +42,6 @@ x = readlines()
 @timing
 def solve_task2(x):
     
-    fishes = []
-    for s in x[0].split(','):
-        fishes.append(Lanternfish(int(s)))
-        
     fishes = [int(f) for f in x[0].split(',')]
     fishes = [fishes.count(i) for i in range(9)]
 
@@ -57,18 +53,14 @@ def solve_task2(x):
         fishes[6] += new_fishes
         fishes[8] = new_fishes
             
-    
     return sum(fishes)
+
 
 print("Task 1 Result:", solve_task1(x))
 
 
 @timing
 def solve_task2(x):
-    
-    fishes = []
-    for s in x[0].split(','):
-        fishes.append(Lanternfish(int(s)))
         
     fishes = [int(f) for f in x[0].split(',')]
     fishes = [fishes.count(i) for i in range(9)]
@@ -81,8 +73,8 @@ def solve_task2(x):
         fishes[6] += new_fishes
         fishes[8] = new_fishes
             
-    
     return sum(fishes)
+
 
 print("Task 2 Result:", solve_task2(x))
 
