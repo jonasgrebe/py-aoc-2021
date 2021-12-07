@@ -53,8 +53,6 @@ def solve_task2(x):
     crabs = np.array(list(map(int, x[0].split(',')))).astype(int)
     fuels = []
     
-    print(0.5 * (2 * crabs - 1))
-    
     positions = list(range(crabs.min(), crabs.max()))
     for pos in positions:
         delta = np.abs(crabs - pos)
@@ -65,5 +63,7 @@ def solve_task2(x):
 
 
 print("Task 2 Result:", solve_task2(x))
+
+
 
 
